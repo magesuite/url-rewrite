@@ -34,6 +34,11 @@ class RewriteRepository implements RewriteRepositoryInterface
      */
     public function getRewrite($requestUri) {
         $rewrites = $this->scopeConfig->getValue('web/custom_rewrites/rewrites', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+
+        if($rewrites === null) {
+            return null;
+        }
+
         $rewrites = $this->cleanRewritesList($rewrites);
         $rewrites = explode(PHP_EOL, $rewrites);
 
