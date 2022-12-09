@@ -1,6 +1,6 @@
 {
     "name": "creativestyle/magesuite-url-rewrite",
-    "description": "",
+    "description": "This module adds the possibility to provide list of URL rewrites",
     "type": "magento2-module",
     "autoload": {
         "files": [
